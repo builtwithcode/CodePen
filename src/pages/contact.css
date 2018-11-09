@@ -1,0 +1,68 @@
+
+#nav{
+    width: 100%;
+    background-color: #0077CC;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: white;
+    display: inline-block;
+    margin: auto;
+    max-Width: 960;
+    text-align: center;
+  }
+  #navBookNow{
+  padding-left: 30px;
+  text-decoration: none;
+  }
+  #contactForm{
+    max-width: 480px;
+    background-color: #0077CC;
+    border: #000000 solid 2px;
+    color: #ffffff;
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+  #contactForm:after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+
+	#contactForm > .inner > * {
+		float: left;
+  }
+  form .field.half.first {
+    padding: 0 1em 0 0;}
+    form .field.half {
+      float: left;
+      padding: 0 0 0 1em;
+      width: 50%;
+  }
+  form, form .field {
+    margin: 0 0 2em;
+    display: block;
+}
+ul.actions {
+  cursor: default;
+  list-style: none;
+  padding-left: 0;
+}
+li{
+  display: inline;
+}
+#clear{
+  margin-left: 1rem;
+}
+label {
+color: #fff;
+    display: block;
+    font-size: .8em;
+    font-weight: 600;
+    letter-spacing: .25em;
+    margin: 0 0 1em;
+    text-transform: uppercase;
+}
+textarea {
+  padding: .75em 1em;
+}
+ 

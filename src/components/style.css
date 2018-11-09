@@ -1,0 +1,44 @@
+button{
+  position: relative;
+  left: 33%;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 30px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #0077CC;
+  color: #fff;
+  padding: 10px;
+}
+.user {
+    display: inline-block;
+    align-items: center;
+    margin: 0 auto 12px auto;
+  }
+  
+  .user:last-child {
+    margin-bottom: 0;
+  }
+  
+  .img {
+    flex: 0 0 96px;
+    width: 96px;
+    height: 96px;
+    margin: 0;
+  
+  }
+  
+  .description {
+    flex: 1;
+    margin-left: 18px;
+    padding: 12px;
+  }
+  
+  .username {
+    margin: 0 0 12px 0;
+    padding: 0;
+  }
+  
+  .excerpt {
+    margin: 0;
+  }
