@@ -1,8 +1,6 @@
 button {
   position: relative;
   left: 33%;
-  display: inline-flex;
-  align-items: center;
   margin-left: 30px;
   margin-top: 0;
   border: 1px solid #000;
@@ -14,7 +12,7 @@ button {
 .user {
   display: inline-block;
   align-items: center;
-  margin: 0 auto 12px auto;
+  margin: auto;
 }
 
 .user:last-child {
@@ -40,5 +38,6 @@ button {
 }
 
 .excerpt {
-  margin: 0;
+  margin: auto;
+  text-align: center;
 }

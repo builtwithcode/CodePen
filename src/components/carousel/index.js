@@ -1,4 +1,4 @@
-import React, { Component, Children, cloneElement } from 'react';
+import React, { Component, Children, cloneElement } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import Swipeable from 'react-swipeable'
@@ -15,11 +15,11 @@ const TitleSection = styled.div`
 
 class Carousel extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       position: 0,
       direction: props.children.length === 2 ? 'prev' : 'next',
-      sliding: false
+      sliding: false,
     }
   }
 
@@ -30,7 +30,8 @@ class Carousel extends Component {
 
     if (numItems === 2) return itemIndex
 
-    if (itemIndex - position < 0) return numItems - Math.abs(itemIndex - position)
+    if (itemIndex - position < 0)
+      return numItems - Math.abs(itemIndex - position)
     return itemIndex - position
   }
 
@@ -38,12 +39,12 @@ class Carousel extends Component {
     this.setState({
       sliding: true,
       direction,
-      position
+      position,
     })
 
     setTimeout(() => {
       this.setState({
-        sliding: false
+        sliding: false,
       })
     }, 50)
   }
@@ -68,65 +69,65 @@ class Carousel extends Component {
     this.doSliding('prev', position === 0 ? numItems - 1 : position - 1)
   }
 
-  handleSwipe = throttle((isNext) => {
-    const { children } = this.props
-    const numItems = children.length || 1
+  handleSwipe = throttle(
+    isNext => {
+      const { children } = this.props
+      const numItems = children.length || 1
 
-    if (isNext && numItems > 1) {
-      this.nextSlide()
-    } else if (numItems > 1) {
-      this.prevSlide()
-    }
-  }, 500, { trailing: false })
+      if (isNext && numItems > 1) {
+        this.nextSlide()
+      } else if (numItems > 1) {
+        this.prevSlide()
+      }
+    },
+    500,
+    { trailing: false }
+  )
 
   render() {
     const { title, children } = this.props
     const { sliding, direction, position } = this.state
 
-    const childrenWithProps = Children.map(children,
-      (child) => cloneElement(child, {
-        numSlides: children.length || 1
+    const childrenWithProps = Children.map(children, child =>
+      cloneElement(child, {
+        numSlides: children.length || 1,
       })
     )
 
     return (
       <div>
         <TitleSection>
-          <h2>{ title }</h2>
-          { childrenWithProps.length > 1 &&
-            (<Indicator
-              length={ childrenWithProps.length }
-              position={ position }
-            />)
-          }
+          <h2>{title}</h2>
+          {childrenWithProps.length > 1 && (
+            <Indicator length={childrenWithProps.length} position={position} />
+          )}
         </TitleSection>
 
         <Swipeable
-          onSwipingLeft={ () => this.handleSwipe(true) }
-          onSwipingRight={ () => this.handleSwipe() }
+          onSwipingLeft={() => this.handleSwipe(true)}
+          onSwipingRight={() => this.handleSwipe()}
         >
           <Wrapper>
             <CarouselContainer
-              sliding={ sliding }
-              direction={ direction }
-              numSlides={ childrenWithProps.length }
+              sliding={sliding}
+              direction={direction}
+              numSlides={childrenWithProps.length}
             >
-              { childrenWithProps.map((child, index) => (
+              {childrenWithProps.map((child, index) => (
                 <CarouselSlot
-                  key={ index }
-                  order={ this.getOrder(index) }
-                  numSlides={ childrenWithProps.length }
-                  position={ position }
+                  key={index}
+                  order={this.getOrder(index)}
+                  numSlides={childrenWithProps.length}
+                  position={position}
                 >
                   {child}
                 </CarouselSlot>
-              )) }
+              ))}
             </CarouselContainer>
-
           </Wrapper>
         </Swipeable>
-        <button onClick={ () => this.prevSlide() }>Prev</button>
-              <button onClick={ () => this.nextSlide() }>Next</button>
+        <button onClick={() => this.prevSlide()}>Prev</button>
+        <button onClick={() => this.nextSlide()}>Next</button>
       </div>
     )
   }
@@ -134,7 +135,7 @@ class Carousel extends Component {
 
 Carousel.propTypes = {
   title: PropTypes.string,
-  children: PropTypes.node
-};
+  children: PropTypes.node,
+}
 
-export default Carousel;
+export default Carousel

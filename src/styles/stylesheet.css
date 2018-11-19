@@ -1,0 +1,147 @@
+.user {
+  display: inline-block;
+  align-items: center;
+  margin: 0 auto 12px auto;
+  cursor: default;
+  text-align: center;
+  max-height: auto;
+}
+.title {
+  text-align: center;
+}
+.user:last-child {
+  margin-bottom: 0;
+}
+.img {
+  flex: 0 0 96px;
+  width: 96px;
+  height: 96px;
+  left: 60px;
+}
+.img-aws {
+  flex: 0 0 96px;
+  width: 280px;
+  height: 96px;
+  margin: 0;
+  left: 40px;
+}
+.description {
+  flex: 1;
+  margin-left: 18px;
+  padding: 12px;
+}
+.username {
+  margin: 0 0 12px 0;
+  padding: 0;
+}
+.excerpt {
+  margin: auto;
+  text-align: center;
+}
+.pass-talk-links {
+  color: rgb(31, 104, 241);
+  text-decoration: underline;
+}
+.pass-talk-links:visited {
+  text-decoration: underline;
+  color: rgb(31, 104, 241);
+}
+a {
+  margin-right: 15px;
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+h1 {
+  margin-top: 30px;
+}
+p {
+  text-align: center;
+}
+.learn-more-container {
+  margin: auto;
+  text-align: center;
+  width: 60%;
+}
+@media (max-width: 900px) {
+  .buttons {
+    margin: auto;
+    width: 50%;
+    display: inline-flex;
+  }
+}
+.buttons {
+  margin: auto;
+  width: 20%;
+}
+#learnMore {
+  display: inline-flex;
+  background-color: #07c;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  max-width: 120px;
+  margin-top: 0.8rem;
+  padding: 5px;
+}
+#bookNow {
+  display: inline-flex;
+  margin-left: 5px;
+  background-color: #07c;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+  max-width: 120px;
+  margin-top: 0.8rem;
+  padding: 5px;
+}
+#banner {
+  width: 100%;
+  background-color: #33a9ff;
+  padding-top: 30px;
+  padding-bottom: 60px;
+  align-content: center;
+}
+#banner-h1 {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+#banner-p {
+  text-align: center;
+  margin: auto;
+  width: 40%;
+}
+.location {
+  margin: auto;
+  width: 40%;
+}
+#location-h1 {
+  text-align: center;
+}
+.location-p {
+  text-align: center;
+}
+#nav {
+  width: 100%;
+  background-color: #07c;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  color: white;
+  display: inline-block;
+  margin: auto;
+  max-width: 960;
+  text-align: center;
+}
+.nav-item {
+  display: inline-flex;
+  transform: skew(-20deg);
+  text-align: center;
+  padding-left: 30px;
+  text-decoration: none;
+}
